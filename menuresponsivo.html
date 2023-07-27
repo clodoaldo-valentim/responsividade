@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Povo livre</h1>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="lista">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Nossa Visão</a></li>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Fale conosco</a></li>
+                <li><a href="#">Nossos cursos</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Bahia é o estado com maior população quilombola do Brasil, diz o Censo 2022</h2>
+            <p>SALVADOR, BA (FOLHAPRESS) - Dados do Censo 2022 do IBGE divulgados nesta quinta (27) apontam que três de cada dez quilombolas brasileiros moram na Bahia. De 1,3 milhão de pessoas que se autodeclararam dessa maneira no país, 397.059 vivem no estado.</p>
+
+            <p>Também estão na Bahia os dois municípios com mais quilombolas no Brasil: Senhor do Bonfim (com 15.999 pessoas) e Salvador (15.897). Ao todo, o Nordeste responde 68,2% do total dessa população no país.</p>
+
+            <p>O Maranhão é o segundo estado de maior população autodeclarada quilombola, com 20,26%. Juntos, os dois estados abrigam metade da população quilombola do país, enquanto o Nordeste abriga 68,2%.</p>
+            <p>Apesar da origem quilombola na formação de Salvador, o professor de história da Bahia da Uneb (Universidade do Estado da Bahia) Alfredo Matta explica que os quilombos urbanos costumam não ter delimitação clara, tornando difícil a organização e a busca por direitos.]</p>
+        </article>
+    </main>
+    <script>
+
+        function mudouTamanho() {
+            //window.innerWidth - propiedade que obtém a largura e a altura da janela do navegador
+            if (window.innerWidth >= 768) { 
+                lista.style.display = 'block'
+            } else {
+                lista.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (lista.style.display == 'block') {
+                lista.style.display = 'none'
+            } else {
+                lista.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
